@@ -1,16 +1,17 @@
 import androidx.compose.runtime.*
 import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.dom.Div
+import org.jetbrains.compose.web.dom.*
 import org.jetbrains.compose.web.renderComposable
-import org.jetbrains.compose.web.dom.H1
-import org.jetbrains.compose.web.dom.Text
+import ui.CSS.AppStyleSheet
 
 fun main() {
     var count: Int by mutableStateOf(0)
     renderComposable(rootElementId = "root") {
+        Style(AppStyleSheet)
         Div({ style { padding(25.px) } }) {
-            H1 { Text("Hellooo") }
+            ui.Header()
             Tx(count)
+
 
         }
     }
