@@ -5,9 +5,10 @@ import org.jetbrains.kotlin.types.error.ErrorModuleDescriptor.platform
 
 
 plugins {
-    kotlin("multiplatform")
+    kotlin("multiplatform") version "1.7.20"
     id("org.jetbrains.compose")
     id("de.jensklingenberg.ktorfit") version "1.0.0"
+    kotlin("plugin.serialization") version "1.7.20"
 }
 
 configure<de.jensklingenberg.ktorfit.gradle.KtorfitGradleConfiguration> {
@@ -49,6 +50,7 @@ kotlin {
                 implementation(kotlin("stdlib-js"))
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-js:1.6.4")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_version")
+                implementation("de.jensklingenberg.ktorfit:ktorfit-lib:1.2.0")
             }
         }
         val jsTest by getting {
