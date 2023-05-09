@@ -40,11 +40,10 @@ kotlin {
         binaries.executable()
     }
     sourceSets {
-        val commonMain by getting
+
         val jsMain by getting {
 
             dependencies {
-                dependsOn(commonMain)
                 val serialization_version = "1.5.0"
                 implementation(compose.web.core)
                 implementation(compose.runtime)
