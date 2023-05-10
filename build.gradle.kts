@@ -45,7 +45,7 @@ kotlin {
                 implementation(kotlin("stdlib-js"))
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-js:1.6.4")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_version")
-
+                implementation("io.insert-koin:koin-core-js:3.4.0")
 
             }
         }
