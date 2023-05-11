@@ -9,5 +9,7 @@ data class Fields(
     @SerialName("category")
     val category: List<String?>?,
     @SerialName("content")
-    val content: String?
+    val content: String?,
+    @SerialName("title")
+    val title: String
 )
