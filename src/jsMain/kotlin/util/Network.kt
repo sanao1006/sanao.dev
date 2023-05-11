@@ -1,4 +1,4 @@
-package common
+package util
 
 import kotlinx.browser.window
 import kotlinx.coroutines.await
