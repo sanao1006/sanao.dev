@@ -3,6 +3,9 @@ package model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import org.intellij.markdown.flavours.commonmark.CommonMarkFlavourDescriptor
+import org.intellij.markdown.html.HtmlGenerator
+import org.intellij.markdown.parser.MarkdownParser
 
 @Serializable()
 data class ContentfulDto(
@@ -20,9 +23,16 @@ data class ContentfulDto(
 
 fun ContentfulDto.toPosts(): Posts {
     return Posts(items!!.map {
+        val flavour = CommonMarkFlavourDescriptor()
+        val parsedTree = MarkdownParser(flavour).buildMarkdownTreeFromString(it.fields!!.content!!)
+        val html = HtmlGenerator(it.fields!!.content!!,parsedTree,flavour).generateHtml()
         Post(
             metadata = it!!.metadata!!,
-            fields = it!!.fields!!,
+            fields = Fields(
+                category = it.fields!!.category,
+                title = it.fields!!.title,
+                content = html
+            ),
             title = it!!.fields!!.title!!,
             createAt = it.sys!!.createdAt!!
         )
