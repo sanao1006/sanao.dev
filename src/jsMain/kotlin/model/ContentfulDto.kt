@@ -17,3 +17,14 @@ data class ContentfulDto(
     @SerialName("total")
     var total: Int? = null
 )
+
+fun ContentfulDto.toPosts(): Posts {
+    return Posts(items!!.map {
+        Post(
+            metadata = it!!.metadata!!,
+            fields = it!!.fields!!,
+            title = it!!.fields!!.title!!,
+            createAt = it.sys!!.createdAt!!
+        )
+    })
+}
