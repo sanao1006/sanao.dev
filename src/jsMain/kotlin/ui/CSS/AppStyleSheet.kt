@@ -23,7 +23,7 @@ object AppStyleSheet : StyleSheet() {
         maxWidth(800.px)
         margin(0.px, auto as CSSNumeric)
         "article" style {
-            padding(6.px, 0.px)
+            padding(8.px, 0.px)
         }
     }
 
