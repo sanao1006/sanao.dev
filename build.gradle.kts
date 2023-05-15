@@ -15,6 +15,9 @@ repositories {
     google()
     mavenCentral()
     maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    maven {
+        url = uri("https://repo.repsy.io/mvn/chrynan/public")
+    }
 }
 
 
@@ -47,6 +50,7 @@ kotlin {
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_version")
                 implementation("io.insert-koin:koin-core-js:3.4.0")
                 implementation("org.jetbrains:markdown-js:0.4.1")
+                implementation("app.softwork:routing-compose-js:0.2.10")
 
             }
         }
