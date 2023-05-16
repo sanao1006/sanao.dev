@@ -51,6 +51,7 @@ kotlin {
                 implementation("io.insert-koin:koin-core-js:3.4.0")
                 implementation("org.jetbrains:markdown-js:0.4.1")
                 implementation("app.softwork:routing-compose-js:0.2.10")
+                implementation(npm("prismjs","1.29.0"))
 
             }
         }

@@ -19,6 +19,8 @@ fun RouteBuilder.Content() {
         }
     }
 
+
     PostList(contents = contents)
 
 }
+
