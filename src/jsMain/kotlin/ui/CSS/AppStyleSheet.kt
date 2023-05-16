@@ -17,6 +17,12 @@ object AppStyleSheet : StyleSheet() {
         textAlign("center")
         fontSize(2.em)
         padding(32.px, 0.px)
+        "a" style {
+            textDecoration("none")
+            color(Color.black)
+            fontFamily("serif")
+            fontWeight("bold")
+        }
     }
 
     val l_content by style {
