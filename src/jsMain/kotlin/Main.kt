@@ -15,8 +15,8 @@ fun main() {
 
 @Composable
 fun MyWebSite() {
-    Header()
     HashRouter("/") {
+        Header()
         Content()
     }
 }
