@@ -2,9 +2,7 @@ package ui
 
 import androidx.compose.runtime.Composable
 import app.softwork.routingcompose.NavLink
-import app.softwork.routingcompose.Parameters
 import app.softwork.routingcompose.RouteBuilder
-import app.softwork.routingcompose.Routing
 import model.Posts
 import org.jetbrains.compose.web.dom.Article
 import org.jetbrains.compose.web.dom.Div
@@ -18,13 +16,17 @@ fun RouteBuilder.PostList(contents: Posts) {
         for (post in contents.posts) {
             Article {
                 route("post") {
-                    PostDetail(post = post)
+                    string {
+                        if (post.title == decodeURIComponent(it)) {
+                            PostDetail(post = post)
+                        }
+                    }
                 }
                 noMatch {
                     Div {
                         Text(post.createAt.take(10))
                     }
-                    NavLink(to = "/post") {
+                    NavLink(to = "/post/${post.title}") {
                         Text(post.title)
                     }
                 }
@@ -32,3 +34,5 @@ fun RouteBuilder.PostList(contents: Posts) {
         }
     }
 }
+
+external fun decodeURIComponent(encodedURI: String): String
