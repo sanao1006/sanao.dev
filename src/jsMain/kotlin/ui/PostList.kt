@@ -7,12 +7,12 @@ import model.Posts
 import org.jetbrains.compose.web.dom.Article
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
-import ui.CSS.AppStyleSheet
+import ui.CSS.ContentStyleSheet
 
 
 @Composable
 fun RouteBuilder.PostList(contents: Posts) {
-    Div(attrs = { classes(AppStyleSheet.l_content) }) {
+    Div(attrs = { classes(ContentStyleSheet.l_content) }) {
         for (post in contents.posts) {
             Article {
                 route("post") {
