@@ -29,7 +29,7 @@ fun ContentfulDto.toPosts(): Posts {
         Post(
             metadata = it!!.metadata!!,
             fields = Fields(
-                category = it.fields!!.category,
+                category = it.fields!!.category ?: emptyList(),
                 title = it.fields!!.title,
                 content = html
             ),
