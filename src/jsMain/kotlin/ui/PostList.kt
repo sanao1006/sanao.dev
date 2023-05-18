@@ -14,15 +14,15 @@ import ui.CSS.ContentStyleSheet
 fun RouteBuilder.PostList(contents: Posts) {
     Div(attrs = { classes(ContentStyleSheet.l_content) }) {
         for (post in contents.posts) {
-            Article {
-                route("post") {
-                    string {
-                        if (post.title == decodeURIComponent(it)) {
-                            PostDetail(post = post)
-                        }
+            route("post") {
+                string {
+                    if (post.title == decodeURIComponent(it)) {
+                        PostDetail(post = post)
                     }
                 }
-                noMatch {
+            }
+            noMatch {
+                Article {
                     Div {
                         Text(post.createAt.take(10))
                     }
