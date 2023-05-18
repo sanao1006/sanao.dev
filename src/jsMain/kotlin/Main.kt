@@ -1,5 +1,5 @@
 import androidx.compose.runtime.Composable
-import app.softwork.routingcompose.HashRouter
+import app.softwork.routingcompose.BrowserRouter
 import org.jetbrains.compose.web.css.Style
 import org.jetbrains.compose.web.renderComposable
 import ui.CSS.AppStyleSheet
@@ -15,7 +15,7 @@ fun main() {
 
 @Composable
 fun MyWebSite() {
-    HashRouter("/") {
+    BrowserRouter("/") {
         Header()
         Content()
     }
