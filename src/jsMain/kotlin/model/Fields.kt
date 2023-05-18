@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Fields(
     @SerialName("category")
-    val category: List<String?>?,
+    val category: List<String?>? = null,
     @SerialName("content")
     val content: String?,
     @SerialName("title")
