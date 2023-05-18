@@ -26,7 +26,10 @@ fun RouteBuilder.PostDetail(post: Post) {
         Text(post.createAt.take(10))
     }
 
-    Div({ prop(HTMLElement::innerHTML::set, post.fields.content!!) })
+    Div(attrs = {
+        classes(ContentStyleSheet.c_content_body)
+        prop(HTMLElement::innerHTML::set, post.fields.content!!) }
+    )
 }
 
 @JsName("Prism")
