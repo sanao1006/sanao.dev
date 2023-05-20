@@ -31,7 +31,8 @@ fun ContentfulDto.toPosts(): Posts {
             fields = Fields(
                 category = it.fields!!.category ?: emptyList(),
                 title = it.fields!!.title,
-                content = html
+                content = html,
+                description = it.fields.description
             ),
             title = it!!.fields!!.title!!,
             createAt = it.sys!!.createdAt!!
