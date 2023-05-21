@@ -22,6 +22,7 @@ fun RouteBuilder.PostList(contents: Posts) {
         val ogpMap: Map<String, String> = mapOf(
             "twitter:card" to "summary",
             "twitter:site" to "@sanao1006",
+            "og:site_name" to "sanao.dev",
             "og:type" to "website",
             "og:title" to "sanao.dev",
             "og:description" to "",
