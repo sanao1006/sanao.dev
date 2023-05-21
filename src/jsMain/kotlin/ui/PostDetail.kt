@@ -28,6 +28,7 @@ fun PostDetail(post: Post, meta: Meta) {
         val ogpMap: Map<String, String> = mapOf(
             "twitter:card" to "summary",
             "twitter:site" to "@sanao1006",
+            "og:site_name" to "sanao.dev",
             "og:type" to "article",
             "og:title" to "${post.title}",
             "og:description" to "${post.fields.description ?: ""}",
