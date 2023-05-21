@@ -32,7 +32,8 @@ fun RouteBuilder.PostDetail(post: Post, meta: Meta) {
             "og:type" to "article",
             "og:title" to "${post.title}",
             "og:description" to "${post.fields.description ?: ""}",
-            "og:url" to "${decodeURIComponent(js("location.href") as String)}"
+            "og:url" to "${decodeURIComponent(js("location.href") as String)}",
+            "og:image" to "https://www.sanao.dev/cardimage.jpg"
         )
         ogpMap.forEach { (key, value) ->
             val metatag = document.createElement("meta")
