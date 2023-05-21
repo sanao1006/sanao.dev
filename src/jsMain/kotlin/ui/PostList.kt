@@ -3,6 +3,7 @@ package ui
 import androidx.compose.runtime.*
 import app.softwork.routingcompose.NavLink
 import app.softwork.routingcompose.RouteBuilder
+import app.softwork.routingcompose.Routing
 import kotlinx.browser.document
 import model.Meta
 import model.Posts
@@ -13,7 +14,7 @@ import org.w3c.dom.get
 import ui.CSS.ContentStyleSheet
 import util.OriginalMetaTag
 
-
+@Routing
 @Composable
 fun RouteBuilder.PostList(contents: Posts) {
     Div(attrs = { classes(ContentStyleSheet.l_content) }) {
