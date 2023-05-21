@@ -13,5 +13,7 @@ data class Fields(
     @SerialName("title")
     val title: String,
     @SerialName("description")
-    val description: String?
+    val description: String?,
+    @SerialName("slug")
+    val slug: String
 )

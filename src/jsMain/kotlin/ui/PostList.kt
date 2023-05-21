@@ -47,7 +47,7 @@ fun RouteBuilder.PostList(contents: Posts) {
         for (post in contents.posts) {
             route("post") {
                 string {
-                    if (post.title == decodeURIComponent(it)) {
+                    if (post.fields.slug == decodeURIComponent(it)) {
                         PostDetail(post = post, meta = meta)
                     }
                 }
@@ -58,7 +58,7 @@ fun RouteBuilder.PostList(contents: Posts) {
                     Div {
                         Text(post.createAt.take(10))
                     }
-                    NavLink(to = "/post/${post.title}") {
+                    NavLink(to = "/post/${post.fields.slug}") {
                         Text(post.title)
                     }
                 }
