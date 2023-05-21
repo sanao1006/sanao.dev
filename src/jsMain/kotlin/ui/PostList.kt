@@ -26,8 +26,9 @@ fun RouteBuilder.PostList(contents: Posts) {
             "og:site_name" to "sanao.dev",
             "og:type" to "website",
             "og:title" to "sanao.dev",
-            "og:description" to "",
-            "og:url" to "${decodeURIComponent(js("location.href") as String)}"
+            "og:description" to "sanao's home",
+            "og:url" to "${decodeURIComponent(js("location.href") as String)}",
+            "og:image" to "https://www.sanao.dev/cardimage.jpg"
         )
         SideEffect {
             head.innerHTML = OriginalMetaTag.meta
