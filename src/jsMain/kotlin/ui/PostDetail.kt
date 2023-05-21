@@ -14,9 +14,9 @@ import org.w3c.dom.*
 import ui.CSS.ContentStyleSheet
 import util.OriginalMetaTag
 
-
+@Routing
 @Composable
-fun PostDetail(post: Post, meta: Meta) {
+fun RouteBuilder.PostDetail(post: Post, meta: Meta) {
     SideEffect {
         Prism.highlightAll()
 
