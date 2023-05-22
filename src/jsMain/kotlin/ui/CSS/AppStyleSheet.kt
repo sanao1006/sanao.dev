@@ -28,7 +28,7 @@ object AppStyleSheet : StyleSheet() {
         }
         media("prefers-color-scheme", StylePropertyValue("light")){
             "body,html" style {
-                backgroundColor(Color("#fff"))
+                backgroundColor(Color("#f1f1f1"))
                 color(Color("#333333"))
             }
             "a" style {
