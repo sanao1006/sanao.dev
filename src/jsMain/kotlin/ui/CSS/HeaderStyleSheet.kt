@@ -12,5 +12,15 @@ object HeaderStyleSheet: StyleSheet(AppStyleSheet) {
             color(Color("#dcdcdc"))
             fontWeight("bold")
         }
+        media("prefers-color-scheme", StylePropertyValue("dark")){
+            "a" style {
+                color(Color("#dcdcdc"))
+            }
+        }
+        media("prefers-color-scheme", StylePropertyValue("light")){
+            "a" style {
+                color(Color("#202020"))
+            }
+        }
     }
 }
