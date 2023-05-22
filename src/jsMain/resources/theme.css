@@ -1,0 +1,17 @@
+.lightTheme_body{
+    background-color: #f1f1f1;
+    color: #333333;
+}
+
+.lightTheme_a{
+    color: #1a0dab;
+}
+
+.darkTheme_body{
+    background-color: #383838;
+    color: #ffffff;
+}
+
+.darkTheme_a{
+    color: #f39800;
+}
