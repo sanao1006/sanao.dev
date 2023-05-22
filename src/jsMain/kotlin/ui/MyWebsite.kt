@@ -19,4 +19,5 @@ fun RouteBuilder.MyWebSite() {
 fun Conteniner(content: @Composable () -> Unit) {
     Header()
     content()
+    Footer()
 }
