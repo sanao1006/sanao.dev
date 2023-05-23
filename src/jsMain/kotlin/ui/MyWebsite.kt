@@ -1,6 +1,8 @@
 package ui
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.State
+import androidx.compose.runtime.collectAsState
 import app.softwork.routingcompose.RouteBuilder
 import app.softwork.routingcompose.Routing
 import org.jetbrains.compose.web.css.Style
@@ -10,14 +12,15 @@ import ui.CSS.AppStyleSheet
 @Composable
 fun RouteBuilder.MyWebSite() {
     Style(AppStyleSheet)
-    Conteniner {
-        PostList()
+    val isDark = AppStyleSheet.isDark.collectAsState()
+    Conteniner(isDark = isDark) {
+        PostList(isDark = isDark)
     }
 }
 
 @Composable
-fun Conteniner(content: @Composable () -> Unit) {
-    Header()
+fun Conteniner(isDark:State<Boolean> = AppStyleSheet.isDark.collectAsState(),content: @Composable () -> Unit) {
+    Header(isDark = isDark)
     content()
-    Footer()
+    Footer(isDArk = isDark)
 }
