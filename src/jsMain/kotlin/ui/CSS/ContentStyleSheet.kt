@@ -4,7 +4,6 @@ import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.css.keywords.auto
 
 object ContentStyleSheet : StyleSheet(AppStyleSheet) {
-    val isDark = AppStyleSheet.isDark.value
     val l_content by style {
         maxWidth(800.px)
         margin(0.px, auto as CSSNumeric)
@@ -13,18 +12,14 @@ object ContentStyleSheet : StyleSheet(AppStyleSheet) {
             padding(10.px, 0.px)
         }
     }
-    init {
-        l_content style {
-            "article a" style {
-                if (isDark) {
-                    color(Color("#f39800 !important"))
-                } else {
-                    color(Color("#1a0dab !important"))
-                }
-            }
-        }
+
+    val c_content_title_color_dark by style {
+        color(Color("#f39800"))
     }
 
+    val c_content_title_color_light by style {
+        color(Color("#1a0dab"))
+    }
 
     val c_content_title by style {
         textAlign("center")

@@ -10,7 +10,7 @@ import org.w3c.dom.get
 
 object AppStyleSheet : StyleSheet() {
     private val _isDark = MutableStateFlow(
-        when (sessionStorage.getItem("isDark") ?: "false") {
+        when (sessionStorage.getItem("isDark") ?: "true") {
             "true" -> true
             else -> false
         }
