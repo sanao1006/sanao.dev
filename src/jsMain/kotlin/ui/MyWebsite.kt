@@ -22,5 +22,5 @@ fun RouteBuilder.MyWebSite() {
 fun Conteniner(isDark:State<Boolean> = AppStyleSheet.isDark.collectAsState(),content: @Composable () -> Unit) {
     Header(isDark = isDark)
     content()
-    Footer(isDArk = isDark)
+    Footer(isDark = isDark)
 }
