@@ -16,7 +16,7 @@ import ui.CSS.ContentStyleSheet
 
 @Routing
 @Composable
-fun RouteBuilder.PostList() {
+fun RouteBuilder.PostList(isDark: State<Boolean>) {
     var contents by rememberSaveable { mutableStateOf(Posts()) }
     LaunchedEffect(Unit) {
         withContext(Dispatchers.Main) {
@@ -37,7 +37,15 @@ fun RouteBuilder.PostList() {
                     Div {
                         Text(post.createAt.take(10))
                     }
-                    NavLink(to = "post/${post.fields.slug}") {
+                    NavLink(
+                        to = "post/${post.fields.slug}",
+                        attrs = {
+                            classes(
+                            if(isDark.value){ ContentStyleSheet.c_content_title_color_dark }
+                            else { ContentStyleSheet.c_content_title_color_light }
+                            )
+                        }
+                    ) {
                         Text(post.title)
                     }
                 }
