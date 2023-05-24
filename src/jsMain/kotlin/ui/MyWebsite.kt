@@ -19,7 +19,10 @@ fun RouteBuilder.MyWebSite() {
 }
 
 @Composable
-fun Conteniner(isDark:State<Boolean> = AppStyleSheet.isDark.collectAsState(),content: @Composable () -> Unit) {
+fun Conteniner(
+    isDark:State<Boolean> = AppStyleSheet.isDark.collectAsState(),
+    content: @Composable () -> Unit
+) {
     Header(isDark = isDark)
     content()
     Footer(isDark = isDark)
