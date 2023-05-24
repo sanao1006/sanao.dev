@@ -1,8 +1,6 @@
 package ui
 
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.State
-import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.*
 import app.softwork.routingcompose.RouteBuilder
 import org.jetbrains.compose.web.dom.Main
 import ui.CSS.AppStyleSheet
@@ -24,5 +22,5 @@ fun Conteniner(
 ) {
     Header(isDark = isDark)
     content()
-    Footer(isDark = isDark)
+    Footer(isDark = isDark, isMouseOver =  remember { mutableStateOf(false) })
 }
