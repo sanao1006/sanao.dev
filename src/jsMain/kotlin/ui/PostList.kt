@@ -5,16 +5,17 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import api.getAllPosts
 import app.softwork.routingcompose.NavLink
 import app.softwork.routingcompose.RouteBuilder
-import app.softwork.routingcompose.Routing
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import model.Posts
+import org.jetbrains.compose.web.css.Style
 import org.jetbrains.compose.web.dom.Article
 import org.jetbrains.compose.web.dom.Div
+import org.jetbrains.compose.web.dom.Section
 import org.jetbrains.compose.web.dom.Text
 import ui.CSS.ContentStyleSheet
 
-@Routing
+
 @Composable
 fun RouteBuilder.PostList(isDark: State<Boolean>) {
     var contents by rememberSaveable { mutableStateOf(Posts()) }
@@ -23,7 +24,8 @@ fun RouteBuilder.PostList(isDark: State<Boolean>) {
             contents = getAllPosts()
         }
     }
-    Div(attrs = { classes(ContentStyleSheet.l_content) }) {
+    Style(ContentStyleSheet)
+    Section(attrs = { classes(ContentStyleSheet.l_content) }) {
         for (post in contents.posts) {
             route("post") {
                 string {
@@ -31,6 +33,7 @@ fun RouteBuilder.PostList(isDark: State<Boolean>) {
                         PostDetail(post = post)
                     }
                 }
+                noMatch { }
             }
             noMatch {
                 Article {
@@ -41,8 +44,11 @@ fun RouteBuilder.PostList(isDark: State<Boolean>) {
                         to = "post/${post.fields.slug}",
                         attrs = {
                             classes(
-                            if(isDark.value){ ContentStyleSheet.c_content_title_color_dark }
-                            else { ContentStyleSheet.c_content_title_color_light }
+                                if (isDark.value) {
+                                    ContentStyleSheet.c_content_title_color_dark
+                                } else {
+                                    ContentStyleSheet.c_content_title_color_light
+                                }
                             )
                         }
                     ) {

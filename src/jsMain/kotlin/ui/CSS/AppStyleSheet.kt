@@ -24,7 +24,6 @@ object AppStyleSheet : StyleSheet() {
             fontFamily("Georgia,Cambria", "Times,serif")
             fontSize(16.8.px)
             fontWeight(500)
-            minHeight(100.vh)
         }
         "a" style {
             textDecoration("none")
@@ -32,6 +31,8 @@ object AppStyleSheet : StyleSheet() {
         "body" style {
             display(DisplayStyle.Flex)
             flexDirection(FlexDirection.Column)
+            minHeight(100.vh)
+            alignItems(AlignItems.Center)
         }
         initBodyColor()
     }
@@ -44,7 +45,6 @@ object AppStyleSheet : StyleSheet() {
             body.classList.add("lightTheme_body")
         }
     }
-
 
     fun changeThemeColor() {
         val body = document.getElementsByTagName("body")[0]!!
