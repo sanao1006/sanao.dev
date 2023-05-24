@@ -2,7 +2,7 @@ package ui.CSS
 
 import org.jetbrains.compose.web.css.*
 
-object FooterStyleSheet: StyleSheet(AppStyleSheet) {
+object FooterStyleSheet: StyleSheet() {
     init {
         "footer" style {
             display(DisplayStyle.Flex)

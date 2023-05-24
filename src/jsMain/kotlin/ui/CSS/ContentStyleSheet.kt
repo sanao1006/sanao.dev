@@ -3,13 +3,18 @@ package ui.CSS
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.css.keywords.auto
 
-object ContentStyleSheet : StyleSheet(AppStyleSheet) {
+object ContentStyleSheet : StyleSheet() {
+    init {
+        "main" style {
+            maxWidth(720.px)
+            width(100.percent)
+            flexGrow(1)
+        }
+    }
+
     val l_content by style {
-        maxWidth(800.px)
         margin(0.px, auto as CSSNumeric)
-        padding(0.px, 10.px, 0.px, 10.px)
-        minWidth(700.px)
-        flexGrow(1)
+        padding(0.px, 12.px, 0.px, 12.px)
         "article" style {
             padding(10.px, 0.px)
         }
