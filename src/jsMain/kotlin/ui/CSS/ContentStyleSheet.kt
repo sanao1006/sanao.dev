@@ -8,6 +8,8 @@ object ContentStyleSheet : StyleSheet(AppStyleSheet) {
         maxWidth(800.px)
         margin(0.px, auto as CSSNumeric)
         padding(0.px, 10.px, 0.px, 10.px)
+        minWidth(700.px)
+        flexGrow(1)
         "article" style {
             padding(10.px, 0.px)
         }
