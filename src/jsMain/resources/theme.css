@@ -1,6 +1,7 @@
 .lightTheme_body{
     background-color: #f1f1f1;
     color: #333333;
+    transition: background-color 0.5s ease;
 }
 
 .lightTheme_a{
@@ -10,6 +11,7 @@
 .darkTheme_body{
     background-color: #383838;
     color: #ffffff;
+    transition: background-color 0.5s ease;
 }
 
 .darkTheme_a{
@@ -48,7 +50,7 @@
     height: 20px;
     background-color: #f1f1f1;
     border-radius: 50%;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .toggle-label:after + .toggle-label:before{
