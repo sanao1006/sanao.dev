@@ -2,19 +2,17 @@ package ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
-import androidx.compose.runtime.collectAsState
 import app.softwork.routingcompose.NavLink
-import app.softwork.routingcompose.Routing
+import org.jetbrains.compose.web.css.Style
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Header
 import org.jetbrains.compose.web.dom.Text
-import ui.CSS.AppStyleSheet
 import ui.CSS.HeaderStyleSheet
 
-@Routing
 @Composable
 fun Header(isDark: State<Boolean>) {
     Header() {
+        Style(HeaderStyleSheet)
         Div(attrs = {
             classes(
                 HeaderStyleSheet.c_header,
@@ -24,8 +22,11 @@ fun Header(isDark: State<Boolean>) {
                 to = "/",
                 attrs = {
                     classes(
-                        if(isDark.value){ HeaderStyleSheet.c_headerColor_dark}
-                        else{ HeaderStyleSheet.c_headerColor_light }
+                        if (isDark.value) {
+                            HeaderStyleSheet.c_headerColor_dark
+                        } else {
+                            HeaderStyleSheet.c_headerColor_light
+                        }
                     )
                 }
             ) {
