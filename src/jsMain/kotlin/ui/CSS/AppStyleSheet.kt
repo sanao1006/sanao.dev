@@ -24,9 +24,14 @@ object AppStyleSheet : StyleSheet() {
             fontFamily("Georgia,Cambria", "Times,serif")
             fontSize(16.8.px)
             fontWeight(500)
+            minHeight(100.vh)
         }
         "a" style {
             textDecoration("none")
+        }
+        "body" style {
+            display(DisplayStyle.Flex)
+            flexDirection(FlexDirection.Column)
         }
         initBodyColor()
     }

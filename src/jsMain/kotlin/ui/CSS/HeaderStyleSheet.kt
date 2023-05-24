@@ -7,6 +7,7 @@ object HeaderStyleSheet : StyleSheet(AppStyleSheet) {
         textAlign("center")
         fontSize(2.em)
         padding(32.px, 0.px)
+        flexGrow(0)
         "a" style {
             textDecoration("underline")
             fontWeight("bold")
