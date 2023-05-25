@@ -1,0 +1,29 @@
+package ui
+
+import androidx.compose.runtime.Composable
+import org.jetbrains.compose.web.css.StyleSheet
+import org.jetbrains.compose.web.dom.*
+import ui.CSS.ContentStyleSheet
+import ui.CSS.ProfileStyleSheet
+
+@Composable
+fun Profile() {
+    Section(attrs = {
+        classes(ProfileStyleSheet.l_profile)
+    }) {
+        H2 {
+            Text("Whoami")
+        }
+        Div(attrs = {
+            classes(ProfileStyleSheet.c_profile_icon)
+        }) {
+            Img(src = "cardimage.jpg", alt = "icon")
+            Span { Text("sanao") }
+        }
+        Div {
+            P {
+                Text("日本のどこかで21年春からソフトウェアエンジニアやってます。Web制作したり、Webシステム作ったり。主に業務ではPHPかTypeScriptを使っています。アイコンはなんかかわいかったので撮影した鳥。名前は知らない。")
+            }
+        }
+    }
+}
