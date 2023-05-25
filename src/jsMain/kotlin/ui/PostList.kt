@@ -13,6 +13,7 @@ import org.jetbrains.compose.web.dom.Article
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Section
 import org.jetbrains.compose.web.dom.Text
+import org.jetbrains.compose.web.dom.H2
 import ui.CSS.ContentStyleSheet
 
 
@@ -26,6 +27,7 @@ fun RouteBuilder.PostList(isDark: State<Boolean>) {
     }
     Style(ContentStyleSheet)
     Section(attrs = { classes(ContentStyleSheet.l_content) }) {
+        H2 { Text("Recently Posts") }
         for (post in contents.posts) {
             route("post") {
                 string {
