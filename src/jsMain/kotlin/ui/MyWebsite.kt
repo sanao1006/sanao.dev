@@ -10,6 +10,7 @@ fun RouteBuilder.MyWebSite() {
     val isDark = AppStyleSheet.isDark.collectAsState()
     Conteniner(isDark = isDark) {
         Main {
+            Profile()
             PostList(isDark = isDark)
         }
     }
