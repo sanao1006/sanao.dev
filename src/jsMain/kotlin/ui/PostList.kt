@@ -8,13 +8,9 @@ import app.softwork.routingcompose.RouteBuilder
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import model.Posts
-import org.jetbrains.compose.web.css.Style
-import org.jetbrains.compose.web.dom.Article
-import org.jetbrains.compose.web.dom.Div
-import org.jetbrains.compose.web.dom.Section
-import org.jetbrains.compose.web.dom.Text
-import org.jetbrains.compose.web.dom.H2
+import org.jetbrains.compose.web.dom.*
 import ui.CSS.ContentStyleSheet
+import ui.CSS.PostsContentStyleSheet
 
 
 @Composable
@@ -25,9 +21,9 @@ fun RouteBuilder.PostList(isDark: State<Boolean>) {
             contents = getAllPosts()
         }
     }
-    Style(ContentStyleSheet)
     Section(attrs = { classes(ContentStyleSheet.l_content) }) {
         H2 { Text("Recently Posts") }
+        Div {
         for (post in contents.posts) {
             route("post") {
                 string {
@@ -47,9 +43,9 @@ fun RouteBuilder.PostList(isDark: State<Boolean>) {
                         attrs = {
                             classes(
                                 if (isDark.value) {
-                                    ContentStyleSheet.c_content_title_color_dark
+                                    PostsContentStyleSheet.c_post_title_color_dark
                                 } else {
-                                    ContentStyleSheet.c_content_title_color_light
+                                    PostsContentStyleSheet.c_post_title_color_light
                                 }
                             )
                         }
@@ -58,6 +54,8 @@ fun RouteBuilder.PostList(isDark: State<Boolean>) {
                     }
                 }
             }
+
+        }
         }
     }
 }

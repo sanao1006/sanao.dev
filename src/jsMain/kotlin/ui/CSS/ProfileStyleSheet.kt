@@ -3,14 +3,7 @@ package ui.CSS
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.css.keywords.auto
 
-object ProfileStyleSheet : StyleSheet(AppStyleSheet) {
-    val l_profile by style {
-        paddingLeft(12.px)
-        paddingRight(12.px)
-        "h2" style {
-            paddingBottom(4.px)
-        }
-    }
+object ProfileStyleSheet : StyleSheet(ContentStyleSheet) {
     val c_profile_icon by style {
         display(DisplayStyle.Flex)
         flexDirection(FlexDirection.Column)
