@@ -20,7 +20,7 @@ fun Profile() {
                 Img(src = "cardimage.jpg", alt = "icon")
                 Span { Text("sanao") }
             }
-            Div {
+            Div(attrs = { classes(ProfileStyleSheet.c_profile_text) }) {
                 Ul {
                     Li { Text("日本のどこかで21年春からソフトウェアエンジニアやってます。") }
                     Li { Text("Web制作やWebシステム作成など、主に業務ではPHPとTypeScriptを使っています。") }

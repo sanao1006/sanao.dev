@@ -23,4 +23,12 @@ object ProfileStyleSheet : StyleSheet(ContentStyleSheet) {
             fontSize(19.4.px)
         }
     }
+
+    val c_profile_text by style {
+        media(mediaMaxWidth(640.px)) {
+            "ul" style {
+                paddingLeft(20.px)
+            }
+        }
+    }
 }
