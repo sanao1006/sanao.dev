@@ -9,7 +9,7 @@ object ProfileStyleSheet : StyleSheet(ContentStyleSheet) {
         flexDirection(FlexDirection.Column)
         alignItems(AlignItems.Center)
         "img" style {
-            borderRadius(80.px)
+            borderRadius(50.percent)
             height(auto)
             maxWidth(100.px)
             media(mediaMaxWidth(640.px)) {
