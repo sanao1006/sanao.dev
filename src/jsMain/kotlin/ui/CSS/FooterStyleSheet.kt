@@ -8,7 +8,7 @@ object FooterStyleSheet: StyleSheet() {
             display(DisplayStyle.Flex)
             flexDirection(FlexDirection.Column)
             alignItems(AlignItems.Center)
-            padding(16.px,0.px)
+            paddingTop(16.px)
             flexGrow(0)
 
         }
