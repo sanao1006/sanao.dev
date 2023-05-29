@@ -10,6 +10,7 @@ object FooterStyleSheet: StyleSheet() {
             alignItems(AlignItems.Center)
             padding(16.px,0.px)
             flexGrow(0)
+
         }
     }
 
@@ -20,5 +21,12 @@ object FooterStyleSheet: StyleSheet() {
         "span" style {
             fontSize(12.px)
         }
+    }
+
+    val c_footer_switchText_isMouseOver by style {
+        opacity(1)
+    }
+    val c_footer_switchText by style {
+        opacity(0)
     }
 }

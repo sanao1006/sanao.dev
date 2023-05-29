@@ -16,27 +16,33 @@ fun Footer(
     Footer {
         Style(FooterStyleSheet)
         Div(attrs = { classes(FooterStyleSheet.c_footer_upper) }) {
-            Span {
-                if (isMouseOver.value) {
-                    Text(
-                        if (isDark.value) {
-                            "光あれ"
-                        } else {
-                            "闇に飲まれる"
-                        }
-                    )
-                }
+            Span(attrs = {
+                classes(
+                    if(isMouseOver.value){
+                        FooterStyleSheet.c_footer_switchText_isMouseOver
+                    }else{
+                        FooterStyleSheet.c_footer_switchText
+                    }
+                )
+            }) {
+                Text(
+                    if (isDark.value) {
+                        "光あれ"
+                    } else {
+                        "闇に飲まれる"
+                    }
+                )
             }
-            Switch(
-                isDark = isDark,
-                isMouseOver = isMouseOver
-            )
-
         }
+        Switch(
+            isDark = isDark,
+            isMouseOver = isMouseOver
+        )
+
+    }
+    Div {
         Div {
-            Div {
-                P({ prop(HTMLElement::innerHTML::set, "&copy; 2023 sanao") })
-            }
+            P({ prop(HTMLElement::innerHTML::set, "&copy; 2023 sanao") })
         }
     }
 }
