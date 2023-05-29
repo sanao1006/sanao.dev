@@ -15,6 +15,7 @@ fun RouteBuilder.MyWebSite() {
         Main {
             Profile()
             PostList(isDark = isDark)
+            Links(isDark = isDark)
         }
     }
 }
