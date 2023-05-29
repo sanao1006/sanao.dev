@@ -7,6 +7,9 @@ object LinksStyleSheet : StyleSheet(ContentStyleSheet) {
         "li" style {
             padding(4.px,0.px)
         }
+        media(mediaMaxWidth(640.px)) {
+                paddingLeft(20.px)
+        }
     }
 
     val c_link_color_dark by style {
