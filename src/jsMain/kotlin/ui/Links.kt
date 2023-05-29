@@ -12,10 +12,9 @@ fun Links(isDark: State<Boolean>) {
     Section(attrs = { classes(ContentStyleSheet.l_content) }) {
         StyleSheet(LinksStyleSheet)
         H2 { Text("Social") }
-        Div {
+        Div(attrs = { classes(LinksStyleSheet.c_links) }) {
             Ul(attrs = {
                 classes(
-                    LinksStyleSheet.c_links,
                     if (isDark.value) {
                         LinksStyleSheet.c_link_color_dark
                     } else {
@@ -27,7 +26,7 @@ fun Links(isDark: State<Boolean>) {
                     Li { A(href = "https://blog.sanao.dev") { Text("Blog") } }
                     Li { A(href = "https://misskey.systems/@sanao") { Text("Misskey.systems") } }
                     Li { A(href = "https://misskey.dev/@sanao") { Text("Misskey.dev") } }
-                    Li { A(href = "https://twitter.com/sanao1006") { Text("Twitter (ほぼROM専)") } }
+                    Li { A(href = "https://twitter.com/sanao1006") { Text("Twitter") } }
                     Li { A(href = "https://scrapbox.io/sanasana/") { Text("Scrapbox") } }
             }
         }

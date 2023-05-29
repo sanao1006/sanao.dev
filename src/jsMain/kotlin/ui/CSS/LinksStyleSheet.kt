@@ -8,7 +8,9 @@ object LinksStyleSheet : StyleSheet(ContentStyleSheet) {
             padding(4.px,0.px)
         }
         media(mediaMaxWidth(640.px)) {
+            "ul" style {
                 paddingLeft(20.px)
+            }
         }
     }
 
