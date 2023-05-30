@@ -12,6 +12,7 @@ object ProfileStyleSheet : StyleSheet(ContentStyleSheet) {
             borderRadius(50.percent)
             height(auto)
             maxWidth(100.px)
+            cursor("pointer")
             media(mediaMaxWidth(640.px)) {
                 self style {
                     width(80.px)
