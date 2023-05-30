@@ -11,7 +11,7 @@ import ui.CSS.LinksStyleSheet
 fun Links(isDark: State<Boolean>) {
     Section(attrs = { classes(ContentStyleSheet.l_content) }) {
         StyleSheet(LinksStyleSheet)
-        H2 { Text("Social") }
+        H2 { Text("Links") }
         Div(attrs = { classes(LinksStyleSheet.c_links) }) {
             Ul(attrs = {
                 classes(
