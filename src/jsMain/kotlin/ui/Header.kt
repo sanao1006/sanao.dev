@@ -36,7 +36,7 @@ fun Header(isDark: State<Boolean>) {
                     Text("Home")
                 }
                 NavLink(
-                    to = "/post",
+                    to = "/posts",
                     attrs = {
                         classes(
                             if (isDark.value) {

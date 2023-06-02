@@ -13,9 +13,13 @@ fun RouteBuilder.MyWebSite() {
     Style(ContentStyleSheet)
     Conteniner(isDark = isDark) {
         Main {
-            Profile()
-            PostList(isDark = isDark)
-            Links(isDark = isDark)
+            route("posts") {
+                PostList(isDark = isDark)
+            }
+            noMatch {
+                Profile()
+                Links(isDark = isDark)
+            }
         }
     }
 }
@@ -27,5 +31,5 @@ fun Conteniner(
 ) {
     Header(isDark = isDark)
     content()
-    Footer(isDark = isDark, isMouseOver =  remember { mutableStateOf(false) })
+    Footer(isDark = isDark, isMouseOver = remember { mutableStateOf(false) })
 }

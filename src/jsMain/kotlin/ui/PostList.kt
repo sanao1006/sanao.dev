@@ -22,40 +22,40 @@ fun RouteBuilder.PostList(isDark: State<Boolean>) {
         }
     }
     Section(attrs = { classes(ContentStyleSheet.l_content) }) {
-        H2 { Text("Recently Posts") }
         Div {
-        for (post in contents.posts) {
-            route("post") {
-                string {
-                    if (post.fields.slug == decodeURIComponent(it)) {
-                        PostDetail(post = post)
-                    }
-                }
-                noMatch { }
-            }
-            noMatch {
-                Article {
-                    Div {
-                        Text(post.createAt.take(10))
-                    }
-                    NavLink(
-                        to = "post/${post.fields.slug}",
-                        attrs = {
-                            classes(
-                                if (isDark.value) {
-                                    PostsContentStyleSheet.c_post_title_color_dark
-                                } else {
-                                    PostsContentStyleSheet.c_post_title_color_light
-                                }
-                            )
+            for (post in contents.posts) {
+                route("post") {
+                    string {
+                        if (post.fields.slug == decodeURIComponent(it)) {
+                            PostDetail(post = post)
                         }
-                    ) {
-                        Text(post.title)
                     }
                 }
-            }
 
-        }
+                noMatch {
+                    H2 { Text("Posts") }
+                    Article {
+                        Div {
+                            Text(post.createAt.take(10))
+                        }
+                        NavLink(
+                            to = "post/${post.fields.slug}",
+                            attrs = {
+                                classes(
+                                    if (isDark.value) {
+                                        PostsContentStyleSheet.c_post_title_color_dark
+                                    } else {
+                                        PostsContentStyleSheet.c_post_title_color_light
+                                    }
+                                )
+                            }
+                        ) {
+                            Text(post.title)
+                        }
+                    }
+                }
+
+            }
         }
     }
 }
