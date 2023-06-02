@@ -23,7 +23,6 @@ fun Links(isDark: State<Boolean>) {
                 )
             }){
                     Li { A(href = "https://github.com/sanao1006") { Text("Github") } }
-                    Li { A(href = "https://blog.sanao.dev") { Text("Blog") } }
                     Li { A(href = "https://misskey.systems/@sanao") { Text("Misskey.systems") } }
                     Li { A(href = "https://misskey.dev/@sanao") { Text("Misskey.dev") } }
                     Li { A(href = "https://twitter.com/sanao1006") { Text("Twitter") } }

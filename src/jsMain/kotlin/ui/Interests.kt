@@ -19,7 +19,7 @@ fun Interests() {
                 Li { Text("ソフトウェアアーキテクチャ") }
                 Li { Text("関数型っぽいもの") }
                 Li { Text("Android, JetpackCompose, KMM") }
-                Li { Text("Misskey") }
+                Li { Text("Misskeyがすきー") }
                 Li { Text("ノベルゲーム。ノベルゲームはいいぞ。") }
             }
         }
