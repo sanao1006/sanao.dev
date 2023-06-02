@@ -3,7 +3,7 @@ package ui.styles
 import org.jetbrains.compose.web.css.*
 
 
-object PostsContentStyleSheet: StyleSheet(ContentStyleSheet) {
+object PostsContentStyleSheet : StyleSheet(ContentStyleSheet) {
     val c_post_title_color_dark by style {
         color(Color("#f39800"))
     }
@@ -14,11 +14,15 @@ object PostsContentStyleSheet: StyleSheet(ContentStyleSheet) {
 
     val c_post_title by style {
         textAlign("center")
-        marginBottom(24.px)
+        margin(24.px, 0.px)
         "h1" style {
             textAlign("center")
             margin(0.px, 0.px, 4.px, 0.px)
         }
+    }
+
+    val c_post_content by style {
+        marginTop(40.px)
     }
 
 }

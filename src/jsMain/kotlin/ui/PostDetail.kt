@@ -23,6 +23,7 @@ fun PostDetail(post: Post) {
         Text(post.createAt.take(10))
     }
     Div(attrs = {
+        classes(PostsContentStyleSheet.c_post_content)
         prop(HTMLElement::innerHTML::set, post.fields.content!!)
     }
     )

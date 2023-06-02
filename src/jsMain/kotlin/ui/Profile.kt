@@ -5,6 +5,8 @@ import kotlinx.browser.document
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import org.jetbrains.compose.web.css.margin
+import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.*
 import ui.styles.ContentStyleSheet
 import ui.styles.ProfileStyleSheet
@@ -17,7 +19,7 @@ fun Profile() {
         H2 {
             Text("Whoami")
         }
-        Div {
+        Div(attrs = { style { margin(32.px, 0.px) } }) {
             Div(attrs = {
                 classes(ProfileStyleSheet.c_profile_icon)
             }) {

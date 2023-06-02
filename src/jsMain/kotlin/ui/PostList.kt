@@ -23,23 +23,21 @@ fun RouteBuilder.PostList(isDark: State<Boolean>) {
     }
     Section(attrs = { classes(ContentStyleSheet.l_content) }) {
         Div {
+            string {}
+            noMatch { H2 { Text("Posts") } }
             for (post in contents.posts) {
-                route("post") {
-                    string {
-                        if (post.fields.slug == decodeURIComponent(it)) {
-                            PostDetail(post = post)
-                        }
+                string {
+                    if (post.fields.slug == decodeURIComponent(it)) {
+                        PostDetail(post = post)
                     }
                 }
-
                 noMatch {
-                    H2 { Text("Posts") }
                     Article {
                         Div {
                             Text(post.createAt.take(10))
                         }
                         NavLink(
-                            to = "post/${post.fields.slug}",
+                            to = "${post.fields.slug}",
                             attrs = {
                                 classes(
                                     if (isDark.value) {
