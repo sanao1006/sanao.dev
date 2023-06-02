@@ -12,8 +12,12 @@ data class Fields(
     val content: String?,
     @SerialName("title")
     val title: String,
-    @SerialName("description")
-    val description: String?,
+    @SerialName("isZenn")
+    val isZenn: Boolean,
+    @SerialName("isQiita")
+    val isQiita: Boolean,
+    @SerialName("url")
+    val url: String = "",
     @SerialName("slug")
     val slug: String
 )
