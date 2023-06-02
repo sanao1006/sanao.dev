@@ -28,6 +28,6 @@ object HeaderStyleSheet : StyleSheet() {
     }
 
     val c_headerColor_dark by style{
-        color(Color("#dcdcdc"))
+        color(Color("#ffffff"))
     }
 }
