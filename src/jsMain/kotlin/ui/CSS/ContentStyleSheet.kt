@@ -6,7 +6,7 @@ import org.jetbrains.compose.web.css.keywords.auto
 object ContentStyleSheet : StyleSheet() {
     init {
         "main" style {
-            maxWidth(720.px)
+            maxWidth(1080.px)
             width(100.percent)
             flexGrow(1)
         }
