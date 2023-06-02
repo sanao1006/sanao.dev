@@ -1,4 +1,4 @@
-package ui.CSS
+package ui.styles
 
 import kotlinx.browser.document
 import kotlinx.browser.sessionStorage

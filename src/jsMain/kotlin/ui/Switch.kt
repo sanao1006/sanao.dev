@@ -7,7 +7,7 @@ import org.jetbrains.compose.web.attributes.InputType
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Input
 import org.jetbrains.compose.web.dom.Label
-import ui.CSS.AppStyleSheet
+import ui.styles.AppStyleSheet
 
 @Composable
 fun Switch(

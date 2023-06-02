@@ -9,8 +9,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import model.Posts
 import org.jetbrains.compose.web.dom.*
-import ui.CSS.ContentStyleSheet
-import ui.CSS.PostsContentStyleSheet
+import ui.styles.ContentStyleSheet
+import ui.styles.PostsContentStyleSheet
 
 
 @Composable

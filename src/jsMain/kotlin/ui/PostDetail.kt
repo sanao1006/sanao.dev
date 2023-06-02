@@ -7,7 +7,7 @@ import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.H1
 import org.jetbrains.compose.web.dom.Text
 import org.w3c.dom.HTMLElement
-import ui.CSS.PostsContentStyleSheet
+import ui.styles.PostsContentStyleSheet
 
 @Composable
 fun PostDetail(post: Post) {

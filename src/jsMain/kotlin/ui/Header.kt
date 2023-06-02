@@ -8,7 +8,7 @@ import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.H1
 import org.jetbrains.compose.web.dom.Header
 import org.jetbrains.compose.web.dom.Text
-import ui.CSS.HeaderStyleSheet
+import ui.styles.HeaderStyleSheet
 
 @Composable
 fun Header(isDark: State<Boolean>) {

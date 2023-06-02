@@ -4,8 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
 import org.jetbrains.compose.web.css.StyleSheet
 import org.jetbrains.compose.web.dom.*
-import ui.CSS.ContentStyleSheet
-import ui.CSS.LinksStyleSheet
+import ui.styles.ContentStyleSheet
+import ui.styles.LinksStyleSheet
 
 @Composable
 fun Links(isDark: State<Boolean>) {

@@ -4,8 +4,8 @@ import androidx.compose.runtime.*
 import app.softwork.routingcompose.RouteBuilder
 import org.jetbrains.compose.web.css.Style
 import org.jetbrains.compose.web.dom.Main
-import ui.CSS.AppStyleSheet
-import ui.CSS.ContentStyleSheet
+import ui.styles.AppStyleSheet
+import ui.styles.ContentStyleSheet
 
 @Composable
 fun RouteBuilder.MyWebSite() {

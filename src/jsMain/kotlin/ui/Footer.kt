@@ -1,12 +1,10 @@
 package ui
 
-import androidx.compose.foundation.Image
 import androidx.compose.runtime.*
-import androidx.compose.ui.graphics.vector.ImageVector
 import org.jetbrains.compose.web.css.Style
 import org.jetbrains.compose.web.dom.*
 import org.w3c.dom.HTMLElement
-import ui.CSS.FooterStyleSheet
+import ui.styles.FooterStyleSheet
 
 @Composable
 fun Footer(

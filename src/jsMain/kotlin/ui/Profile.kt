@@ -6,8 +6,8 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.dom.*
-import ui.CSS.ContentStyleSheet
-import ui.CSS.ProfileStyleSheet
+import ui.styles.ContentStyleSheet
+import ui.styles.ProfileStyleSheet
 
 @Composable
 fun Profile() {

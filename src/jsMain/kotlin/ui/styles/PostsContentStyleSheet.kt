@@ -1,4 +1,4 @@
-package ui.CSS
+package ui.styles
 
 import org.jetbrains.compose.web.css.*
 
