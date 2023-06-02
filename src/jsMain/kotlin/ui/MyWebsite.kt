@@ -18,6 +18,7 @@ fun RouteBuilder.MyWebSite() {
             }
             noMatch {
                 Profile()
+                Interests()
                 Links(isDark = isDark)
             }
         }
