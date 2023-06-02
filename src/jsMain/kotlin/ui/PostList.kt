@@ -24,7 +24,7 @@ fun RouteBuilder.PostList(isDark: State<Boolean>) {
     Section(attrs = { classes(ContentStyleSheet.l_content) }) {
         Div {
             string {}
-            noMatch { H2 { Text("Posts") } }
+            noMatch { H2 { Text("Post") } }
             for (post in contents.posts) {
                 string {
                     if (post.fields.slug == decodeURIComponent(it)) {
