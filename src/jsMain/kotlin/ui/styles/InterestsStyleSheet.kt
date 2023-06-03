@@ -5,6 +5,7 @@ import org.jetbrains.compose.web.css.*
 object InterestsStyleSheet: StyleSheet(ContentStyleSheet)  {
     val c_interests by style {
         margin(24.px, 0.px)
+        lineHeight("1.3")
         "li" style {
             padding(4.px,0.px)
         }

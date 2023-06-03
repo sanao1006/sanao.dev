@@ -16,9 +16,10 @@ fun Interests() {
         Div(attrs = { classes(InterestsStyleSheet.c_interests) }) {
             Ul {
                 Li { Text("Kotlin, Nim, Haskell") }
+                Li { Text("Android, JetpackCompose, KMP") }
+                Li { Text("GraphQL") }
                 Li { Text("ソフトウェアアーキテクチャ") }
                 Li { Text("関数型みのあるもの") }
-                Li { Text("Android, JetpackCompose, KMM") }
                 Li { Text("Misskeyがすきー") }
                 Li { Text("ノベルゲーム。ノベルゲームはいいぞ。") }
             }
