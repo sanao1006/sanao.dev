@@ -24,7 +24,7 @@ fun Conteniner(
     isDark: State<Boolean> = AppStyleSheet.isDark.collectAsState(),
     content: @Composable () -> Unit
 ) {
-    Header(isDark = isDark)
+    Header()
     content()
     Footer(isDark = isDark, isMouseOver = remember { mutableStateOf(false) })
 }
