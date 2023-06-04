@@ -11,9 +11,6 @@ import ui.styles.PostsContentStyleSheet
 
 @Composable
 fun PostDetail(post: Post) {
-    SideEffect {
-        Prism.highlightAll()
-    }
     Div(attrs = {
         classes(PostsContentStyleSheet.c_post_title)
     }) {
@@ -27,13 +24,4 @@ fun PostDetail(post: Post) {
         prop(HTMLElement::innerHTML::set, post.fields.content!!)
     }
     )
-}
-
-@JsName("Prism")
-@JsModule("./prism.js")
-@JsNonModule
-external class Prism {
-    companion object {
-        fun highlightAll()
-    }
 }
