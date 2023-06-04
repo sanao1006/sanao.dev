@@ -24,11 +24,21 @@ object ProfileStyleSheet : StyleSheet(ContentStyleSheet) {
             fontSize(19.4.px)
         }
     }
-
+    val c_profile by style {
+        margin(32.px, 0.px)
+        media(mediaMinWidth(640.1.px)) {
+            self style {
+                lineHeight("1.8")
+            }
+        }
+    }
     val c_profile_text by style {
         media(mediaMaxWidth(640.px)) {
             "ul" style {
                 paddingLeft(20.px)
+                "li" style {
+                    padding(4.px, 0.px)
+                }
             }
         }
     }

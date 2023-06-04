@@ -19,7 +19,7 @@ fun Profile() {
         H2 {
             Text("Whoami")
         }
-        Div(attrs = { style { margin(32.px, 0.px) } }) {
+        Div(attrs = { classes(ProfileStyleSheet.c_profile) }) {
             Div(attrs = {
                 classes(ProfileStyleSheet.c_profile_icon)
             }) {
