@@ -1,7 +1,6 @@
 package ui
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.State
 import org.jetbrains.compose.web.css.StyleSheet
 import org.jetbrains.compose.web.dom.*
 import ui.styles.ContentStyleSheet
@@ -15,10 +14,11 @@ fun Interests() {
         H2 { Text("Interests") }
         Div(attrs = { classes(InterestsStyleSheet.c_interests) }) {
             Ul {
-                Li { Text("Kotlin, Nim, Haskell") }
-                Li { Text("Android, JetpackCompose, KMP") }
+                Li { Text("Kotlin, Java, Haskell") }
+                Li { Text("ソフトウェア設計、アーキテクチャ") }
+                Li { Text("DDD") }
                 Li { Text("GraphQL") }
-                Li { Text("ソフトウェアアーキテクチャ") }
+                Li { Text("Android, JetpackCompose, KMP") }
                 Li { Text("関数型みのあるもの") }
                 Li { Text("Misskeyがすきー") }
                 Li { Text("ノベルゲーム。ノベルゲームはいいぞ。") }
