@@ -14,7 +14,7 @@ fun Interests() {
         H2 { Text("Interests") }
         Div(attrs = { classes(InterestsStyleSheet.c_interests) }) {
             Ul {
-                Li { Text("Kotlin, Java, Haskell") }
+                Li { Text("Kotlin, Java, Scala, Haskell") }
                 Li { Text("ソフトウェア設計、アーキテクチャ") }
                 Li { Text("DDD") }
                 Li { Text("GraphQL") }
