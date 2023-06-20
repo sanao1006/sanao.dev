@@ -27,7 +27,8 @@ fun Links(isDark: State<Boolean>) {
                     Li { A(href = "https://bsky.app/profile/sanao.bsky.social") { Text("Bluesky") } }
                     Li { A(href = "https://misskey.systems/@sanao") { Text("Misskey.systems") } }
                     Li { A(href = "https://misskey.dev/@sanao") { Text("Misskey.dev") } }
-                    Li { A(href = "https://twitter.com/sanao1006") { Text("Twitter") } }
+                    Li { A(href = "https://qiita.com/sanao_desu") { Text("Qiita") } }
+                    Li { A(href = "https://zenn.dev/sanao1000") { Text("Zenn") } }
                     Li { A(href = "https://scrapbox.io/sanasana/") { Text("Scrapbox") } }
             }
         }

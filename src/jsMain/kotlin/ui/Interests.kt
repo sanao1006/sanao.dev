@@ -14,14 +14,13 @@ fun Interests() {
         H2 { Text("Interests") }
         Div(attrs = { classes(InterestsStyleSheet.c_interests) }) {
             Ul {
-                Li { Text("Kotlin, Java, Scala, Haskell") }
+                Li { Text("Kotlin, Scala, Haskell") }
+                Li { Text("関数型言語（モナモナしすぎない程度に）") }
                 Li { Text("ソフトウェア設計、アーキテクチャ") }
                 Li { Text("DDD") }
-                Li { Text("GraphQL") }
-                Li { Text("Android, JetpackCompose, KMP") }
-                Li { Text("関数型みのあるもの") }
-                Li { Text("Misskeyがすきー") }
+                Li { Text("Misskeyがすきー。Blueskyも始めたぞ") }
                 Li { Text("ノベルゲーム。ノベルゲームはいいぞ。") }
+                Li { Text("やきう") }
             }
         }
     }
