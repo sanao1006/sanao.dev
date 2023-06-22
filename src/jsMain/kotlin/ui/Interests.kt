@@ -17,8 +17,9 @@ fun Interests() {
                 Li { Text("Kotlin, Scala, Haskell") }
                 Li { Text("関数型言語（モナモナしすぎない程度に）") }
                 Li { Text("ソフトウェア設計、アーキテクチャ") }
-                Li { Text("DDD") }
-                Li { Text("Misskeyがすきー。Blueskyも始めたぞ") }
+                Li { Text("Web") }
+                Li { Text("SNSのプロトコル") }
+                Li { Text("Misskeyがすきー。Blueskyもいいぞ") }
                 Li { Text("ノベルゲーム。ノベルゲームはいいぞ。") }
                 Li { Text("やきう") }
             }
