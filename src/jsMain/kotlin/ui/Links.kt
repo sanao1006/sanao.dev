@@ -21,15 +21,16 @@ fun Links(isDark: State<Boolean>) {
                         LinksStyleSheet.c_link_color_light
                     }
                 )
-            }){
-                    Li { A(href = "https://github.com/sanao1006") { Text("Github") } }
-                    Li { A(href = "mailto:jinsei@sanao.dev") { Text("Mail") } }
-                    Li { A(href = "https://bsky.app/profile/sanao.bsky.social") { Text("Bluesky") } }
-                    Li { A(href = "https://misskey.systems/@sanao") { Text("Misskey.systems") } }
-                    Li { A(href = "https://misskey.dev/@sanao") { Text("Misskey.dev") } }
-                    Li { A(href = "https://qiita.com/sanao_desu") { Text("Qiita") } }
-                    Li { A(href = "https://zenn.dev/sanao1000") { Text("Zenn") } }
-                    Li { A(href = "https://scrapbox.io/sanasana/") { Text("Scrapbox") } }
+            }) {
+                Li { A(href = "https://github.com/sanao1006") { Text("Github") } }
+                Li { A(href = "https://blog.sanao.dev") { Text("Blog") } }
+                Li { A(href = "mailto:jinsei@sanao.dev") { Text("Mail") } }
+                Li { A(href = "https://bsky.app/profile/sanao.bsky.social") { Text("Bluesky") } }
+                Li { A(href = "https://misskey.systems/@sanao") { Text("Misskey.systems") } }
+                Li { A(href = "https://misskey.dev/@sanao") { Text("Misskey.dev") } }
+                Li { A(href = "https://qiita.com/sanao_desu") { Text("Qiita") } }
+                Li { A(href = "https://zenn.dev/sanao1000") { Text("Zenn") } }
+                Li { A(href = "https://scrapbox.io/sanasana/") { Text("Scrapbox") } }
             }
         }
     }
