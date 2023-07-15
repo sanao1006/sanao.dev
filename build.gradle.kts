@@ -1,11 +1,9 @@
-import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.STRING
 import java.util.*
 
 plugins {
     kotlin("multiplatform")
     id("org.jetbrains.compose")
     kotlin("plugin.serialization") version "1.7.20"
-    id("com.codingfeline.buildkonfig") version "0.13.3"
 }
 
 group "dev.sanao"
@@ -57,26 +55,5 @@ kotlin {
                 implementation(kotlin("test-js"))
             }
         }
-    }
-}
-
-
-fun getApiKey(): String {
-    val properties = Properties()
-    properties.load(project.rootProject.file("local.properties").inputStream())
-    return properties.getProperty("API_KEY")
-}
-
-fun getSpaceId(): String {
-    val properties = Properties()
-    properties.load(project.rootProject.file("local.properties").inputStream())
-    return properties.getProperty("SPACE_ID")
-}
-
-buildkonfig {
-    packageName = "sanao.dev"
-    defaultConfigs {
-        buildConfigField(STRING, "API_KEY", getApiKey())
-        buildConfigField(STRING, "SPACE_ID", getSpaceId() )
     }
 }
