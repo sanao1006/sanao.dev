@@ -16,7 +16,8 @@ fun Interests() {
             Ul {
                 Li { Text("Haskell, Kotlin, TypeScript") }
                 Li { Text("関数型言語") }
-                Li { Text("圏論") }
+                Li { Text("Android") }
+                Li { Text("Jetpack Compose") }
                 Li { Text("Web") }
                 Li { Text("ソフトウェア設計、アーキテクチャ") }
                 Li { Text("Misskeyがすきー。Blueskyもいいぞ") }
