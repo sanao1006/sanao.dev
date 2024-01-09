@@ -1,5 +1,3 @@
-import java.util.*
-
 plugins {
     kotlin("multiplatform")
     id("org.jetbrains.compose")
@@ -47,6 +45,7 @@ kotlin {
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-js:1.6.4")
                 implementation("io.insert-koin:koin-core-js:3.4.0")
                 implementation("org.jetbrains:markdown-js:0.4.1")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_version")
 
             }
         }

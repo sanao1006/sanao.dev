@@ -14,6 +14,7 @@ fun MyWebSite() {
         Main {
                 Profile()
                 Interests()
+            PostList()
                 Links(isDark = isDark)
         }
     }
