@@ -34,9 +34,9 @@ fun Profile() {
             }
             Div(attrs = { classes(ProfileStyleSheet.c_profile_text) }) {
                 Ul {
-                    Li { Text("日本のどこかで21年春からソフトウェアエンジニアやってます。") }
-                    Li { Text("Web制作やWebシステム作成など、主に業務ではPHPとJavaScriptを使っています。") }
-                    Li { Text("アイコンはなんかかわいかったので撮影した鳥。名前は知らない。") }
+                    Li { Text("Android Developer from May 2024") }
+                    Li { Text("Japanese") }
+                    Li { Text("Love MLB") }
                 }
             }
 
