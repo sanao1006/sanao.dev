@@ -34,7 +34,7 @@ fun Profile() {
             }
             Div(attrs = { classes(ProfileStyleSheet.c_profile_text) }) {
                 Ul {
-                    Li { Text("Android Developer from May 2024") }
+                    Li { Text("Android Developer") }
                     Li { Text("Japanese") }
                     Li { Text("Love MLB") }
                 }
